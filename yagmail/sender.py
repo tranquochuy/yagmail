@@ -181,7 +181,7 @@ class SMTPBase:
         self.is_closed = True
         try:
             self.smtp.quit()
-        except (TypeError, AttributeError, smtplib.SMTPServerDisconnected):
+        except:
             pass
 
     def _login(self, password):
